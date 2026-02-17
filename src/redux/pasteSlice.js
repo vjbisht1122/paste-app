@@ -5,9 +5,13 @@ const initialState = {
 }
 const pasteSlice = createSlice({
     name: "pastes",
-    initialState: [],
+    initialState,
     reducers: {
         addToPastes: (state, action) => {
+            const paste = action.payload;
+            state.pastes.push(paste);
+            localStorage.setItem("pastes", JSON.stringify(state.pastes));
+        
 
         },
         updateToPastes: (state, action) => {
