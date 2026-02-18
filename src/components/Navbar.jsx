@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <div className='flex flex-row gap-4 place-content-evenly '>
        <NavLink to="/">
-        Home
+        Home 
       </NavLink>
       <NavLink to="/pastes">
         Paste
