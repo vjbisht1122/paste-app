@@ -4,6 +4,6 @@ import pasteReducer from "./redux/pasteSlice"
 
 export const store = configureStore({
   reducer: {
-    counter: pasteReducer,
+    paste: pasteReducer,
   },
 })
