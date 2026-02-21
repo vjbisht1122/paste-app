@@ -25,7 +25,9 @@ const Paste = () => {
             });
         } else {
             navigator.clipboard.writeText(shareUrl);
-            toast.success("Link copied to clipboard");
+            toast.success("Link copied to clipboard", {
+                autoClose: 500,
+            });
         }
     }
 
@@ -51,7 +53,8 @@ const Paste = () => {
                                 </div>
                                 <div className='flex flex-row content-center justify-center gap-2 '>
                                     <button>
-                                        Edit
+                                       <a href={`/?pasteId=${paste?._id}`}> Edit</a>
+                                      
                                     </button>
                                     <Link to={`/pastes/${paste._id}`} >
                                         <button>
@@ -73,11 +76,11 @@ const Paste = () => {
                                     <button onClick={() => handleShare(paste)}>
                                         share
                                     </button>
-                                   
+
                                 </div>
-                                 <div>
-                                        {paste.createdAt}
-                                    </div>
+                                <div>
+                                    {paste.createdAt}
+                                </div>
                             </div>
                         )
                     }
