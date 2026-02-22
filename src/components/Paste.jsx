@@ -64,9 +64,7 @@ const Paste = () => {
                                     </Link>
                                     <button onClick={() => {
                                         navigator.clipboard.writeText(paste.content)
-                                        toast("copied to clipboard", {
-                                            autoClose: 500,
-                                        })
+                                        toast("copied to clipboard")
                                     }}>
                                         copy
                                     </button>
