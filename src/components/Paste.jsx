@@ -53,8 +53,8 @@ const Paste = () => {
                                 </div>
                                 <div className='flex flex-row content-center justify-center gap-2 '>
                                     <button>
-                                       <a href={`/?pasteId=${paste?._id}`}> Edit</a>
-                                      
+                                        <a href={`/?pasteId=${paste?._id}`}> Edit</a>
+
                                     </button>
                                     <Link to={`/pastes/${paste._id}`} >
                                         <button>
@@ -64,7 +64,9 @@ const Paste = () => {
                                     </Link>
                                     <button onClick={() => {
                                         navigator.clipboard.writeText(paste.content)
-                                        toast("copied to clipboard")
+                                        toast("copied to clipboard"), {
+                                            autoClose: 500,
+                                        }
                                     }}>
                                         copy
                                     </button>
